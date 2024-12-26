@@ -5,7 +5,7 @@ import annaLogo from './images/logo-a-grey.svg';
 import upArrow from './images/arrow-up.svg';
 import githubImg from "./images/github.svg";
 import Section from './components/Section';
-// import Project from './components/Project';
+import Project from './components/Project';
 
 // let projects = [{
 //   "name": "Reduction Print Letters",
@@ -17,6 +17,7 @@ import Section from './components/Section';
 //   "description": "bla bla bla",
 //   "technologies": [".Net", "PoweShell", "IT"]
 // }];
+let projects = ["aaa", "bbb", "ccc"];
 
 function App() {
 
@@ -68,7 +69,7 @@ function App() {
           </Section>
         </section>
         <section id='projects'>
-          {/* <ul>
+          <ul>
             <div>
               {projects.map((pro, i) => (
                 <Section key={'s' + i} sectionName={`# ${i + 1} Project`}>
@@ -76,7 +77,7 @@ function App() {
                 </Section>
               ))}
             </div>
-          </ul> */}
+          </ul>
         </section>
       </div>
       {/* <a href='#top' className={isScroll? classes['back-to-top'] : classes.hidden} onClick={!isScroll}> */}
