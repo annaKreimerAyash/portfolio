@@ -14,6 +14,7 @@ import Project from './components/Project';
 // npm install @types/node --save-dev
 // npm i @types/webpack-env -D
 
+// require.context('../images/', true, /\.(png|ico|svg|jpg|gif)$/)
 // require.context('./images/', useSubdirectories = false, RegExp = /^**\.\/**/)
 // const imgFolder = require.context('./assets/', useSubdirectories = false)
 // const img_node = images(`./${someVariable}.png`);
