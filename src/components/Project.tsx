@@ -19,13 +19,13 @@ interface Project
     return (
         <>
             <h4>{props.projects.name}</h4>
-            {/* <h4>{props.data.name}</h4>
-            <p>{data.description}</p>
+            <h4>{props.projects.name}</h4>
+            <p>{props.projects.description}</p>
             <ul>
-                {data.technologies.map((tech, j) => (
+                {props.projects.technologies.map((tech, j) => (
                     <li key={j}>{tech}</li>
                 ))}
-            </ul> */}
+            </ul>
         </>
     )
 }
