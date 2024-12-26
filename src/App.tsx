@@ -4,7 +4,7 @@ import classes from './main.module.css';
 import annaLogo from './images/logo-a-grey.svg';
 import upArrow from './images/arrow-up.svg';
 import githubImg from "./images/github.svg";
-// import Section from './components/Section';
+import Section from './components/Section';
 // import Project from './components/Project';
 
 // let projects = [{
@@ -50,7 +50,7 @@ function App() {
           </div>
         </div>
         <section id='about'>
-          {/* <Section sectionName={'About'}>
+          <Section sectionName={'About'}>
             <p>Passionate Frontend Developer with 4+ years of experience designing and developing dynamic, user-centric web applications.
               Proficient in React.js, JavaScript, HTML5, CSS3, and responsive design. Known for creating seamless, scalable, and maintainable code,
               improving user experiences, and collaborating effectively with cross-functional teams to deliver high-quality projects on time.
@@ -65,7 +65,7 @@ function App() {
               <li>HTML5</li>
               <li>CSS3</li>
             </ul>
-          </Section> */}
+          </Section>
         </section>
         <section id='projects'>
           {/* <ul>
