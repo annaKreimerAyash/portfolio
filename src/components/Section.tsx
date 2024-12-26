@@ -1,7 +1,6 @@
-//import React, { ReactNode } from "react";
 import classes from "./SectionStyle.module.css";
 import projectImg from "../images/project-3.png";
-import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal } from "react";
+import { ReactNode } from "react";
 // import githubImg from "../images/github.svg";
 
 
