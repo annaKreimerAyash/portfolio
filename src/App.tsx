@@ -12,13 +12,12 @@ import Section from './components/Section';
 import Project from './components/Project';
 
 // npm install @types/node --save-dev
+// npm i @types/webpack-env -D
 
-// const imgFolder = './images/';
-// const fs = require('fs');
-// const listImg = [];
-// fs.readdirSync(imgFolder).forEach((file: any) => {
-//   listImg.push(file);
-// });
+// require.context('./images/', useSubdirectories = false, RegExp = /^**\.\/**/)
+// const imgFolder = require.context('./assets/', useSubdirectories = false)
+// const img_node = images(`./${someVariable}.png`);
+// return <img src={img_node}/>;
 
 
 // function importAll(r) {
@@ -27,6 +26,7 @@ import Project from './components/Project';
 //   return images;
 // }
 // const images = importAll(require.context('./images', false, '/\.svg/'));
+
 
 let projects = [{
   "name": "Reduction Print Letters",
