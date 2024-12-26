@@ -5,6 +5,9 @@ import annaLogo from './images/logo-a-grey.svg';
 import upArrow from './images/arrow-up.svg';
 import githubImg from "./images/github.svg";
 import linkedinImg from "./images/linkedin.svg";
+import reactIcon from "./images/react-icon.svg";
+import jsIcon from "./images/js-icon.svg";
+import htmlIcon from "./images/html5-icon.svg";
 import Section from './components/Section';
 import Project from './components/Project';
 
@@ -46,7 +49,7 @@ function App() {
             <p>I'm a software engineer specializing in building exceptional digital experiences.</p>
             <div className={classes['work__links']}>
               <a target="_blank" className={classes['link__text']}>
-                Visit Site <span>→</span>
+                Visit Isracard Site <span>→</span>
               </a>
               <a href="https://github.com/annaKreimerAyash/portfolio" title="View Source Code" target="_blank">
                 <img src={githubImg} className={classes['work__code']} alt="GitHub" />
@@ -64,6 +67,11 @@ function App() {
               improving user experiences, and collaborating effectively with cross-functional teams to deliver high-quality projects on time.
               Adept at optimizing processes, driving cost savings, and mentoring junior developers.</p>
             <h4>My Skills</h4>
+            <div className={classes['work__links']}>
+              <img src={reactIcon} className={classes['work__code']} alt="ReactJs" />
+              <img src={jsIcon} className={classes['work__code']} alt="JS" />
+              <img src={htmlIcon} className={classes['work__code']} alt="Html5" />
+            </div>
             <ul className={classes['work__list']}>
               <li>JavaScript(ES6+)</li>
               <li>React.js</li>
