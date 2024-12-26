@@ -1,21 +1,11 @@
-// import React from "react";
-
-//import { ReactNode } from "react";
-
-// interface ProjectProps {
-//     projects: Project;
-// }
-
-interface Project
-{
-  name: string, 
-  description: string,
-  technologies: string[],
+interface Project {
+    name: string,
+    description: string,
+    technologies: string[],
+    // children?: ReactNode
 }
-// export class Project extends React.Component<ProjectProps, void> {
-    export default function Project (props: {projects: Project})  {
-    // public render() {
-//export default function Project(props: { data: Iterable<ReactNode> } ) {
+
+export default function Project(props: { projects: Project }) {
     return (
         <>
             <h4>{props.projects.name}</h4>

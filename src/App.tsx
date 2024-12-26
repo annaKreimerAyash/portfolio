@@ -1,9 +1,10 @@
-//import { useState } from 'react'
+// import { useState } from 'react'
 import './App.css';
 import classes from './main.module.css';
 import annaLogo from './images/logo-a-grey.svg';
 import upArrow from './images/arrow-up.svg';
 import githubImg from "./images/github.svg";
+import linkedinImg from "./images/linkedin.svg";
 import Section from './components/Section';
 import Project from './components/Project';
 
@@ -19,9 +20,9 @@ let projects = [{
 }];
 
 
-// let projects = ["aaa", "bbb", "ccc"];
-
 function App() {
+
+  //const [isScroll, setIsScroll] = useState(false);
 
   return (
     <div>
@@ -36,6 +37,7 @@ function App() {
           </ul>
         </nav>
       </div>
+      {/* <div role='main' onScroll={() => setIsScroll(true)} style={{ overflowY: 'scroll', height: '450px' }}> */}
       <div role='main'>
         <div className={classes.row}>
           <div>
@@ -46,8 +48,11 @@ function App() {
               <a target="_blank" className={classes['link__text']}>
                 Visit Site <span>→</span>
               </a>
-              <a href="https://github.com/nisarhassan12/portfolio" title="View Source Code" target="_blank">
+              <a href="https://github.com/annaKreimerAyash/portfolio" title="View Source Code" target="_blank">
                 <img src={githubImg} className={classes['work__code']} alt="GitHub" />
+              </a>
+              <a href="https://linkedin.com/in/annakayash" title="Anna's LinkedIn Profile" target="_blank">
+                <img src={linkedinImg} className={classes['work__code']} alt="LinkedIn" />
               </a>
             </div>
           </div>
@@ -71,15 +76,6 @@ function App() {
           </Section>
         </section>
         <section id='projects'>
-          {/* <ul>
-            <div>
-              {projects.map((pro, i) => (
-                <Section key={'s' + i} sectionName={`# ${i + 1} Project`}>
-                  <Project key={'p' + i} data={pro} />
-                </Section>
-              ))}
-            </div>
-          </ul> */}
           <ul>
             <div>
               {projects.map((pro, i) => (
