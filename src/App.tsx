@@ -11,6 +11,23 @@ import htmlIcon from "./images/html5-icon.svg";
 import Section from './components/Section';
 import Project from './components/Project';
 
+// npm install @types/node --save-dev
+
+// const imgFolder = './images/';
+// const fs = require('fs');
+// const listImg = [];
+// fs.readdirSync(imgFolder).forEach((file: any) => {
+//   listImg.push(file);
+// });
+
+
+// function importAll(r) {
+//   let images = {};
+//   r.keys().map(item => { images[item.replace('./', '')] = r(item); });
+//   return images;
+// }
+// const images = importAll(require.context('./images', false, '/\.svg/'));
+
 let projects = [{
   "name": "Reduction Print Letters",
   "description": "change distribution process from print to digital channals",
