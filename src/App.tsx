@@ -7,17 +7,19 @@ import githubImg from "./images/github.svg";
 import Section from './components/Section';
 import Project from './components/Project';
 
-// let projects = [{
-//   "name": "Reduction Print Letters",
-//   "description": "change distribution process from print to digital channals",
-//   "technologies": ["HTML", "CSS", "JavaScript", "ReactJs"]
-// },
-// {
-//   "name": "Update PB",
-//   "description": "bla bla bla",
-//   "technologies": [".Net", "PoweShell", "IT"]
-// }];
-let projects = ["aaa", "bbb", "ccc"];
+let projects = [{
+  "name": "Reduction Print Letters",
+  "description": "change distribution process from print to digital channals",
+  "technologies": ["HTML", "CSS", "JavaScript", "ReactJs"]
+},
+{
+  "name": "Update PB",
+  "description": "bla bla bla",
+  "technologies": [".Net", "PoweShell", "IT"]
+}];
+
+
+// let projects = ["aaa", "bbb", "ccc"];
 
 function App() {
 
@@ -69,11 +71,20 @@ function App() {
           </Section>
         </section>
         <section id='projects'>
-          <ul>
+          {/* <ul>
             <div>
               {projects.map((pro, i) => (
                 <Section key={'s' + i} sectionName={`# ${i + 1} Project`}>
                   <Project key={'p' + i} data={pro} />
+                </Section>
+              ))}
+            </div>
+          </ul> */}
+          <ul>
+            <div>
+              {projects.map((pro, i) => (
+                <Section key={'s' + i} sectionName={`# ${i + 1} Project`}>
+                  <Project key={'p' + i} projects={pro} />
                 </Section>
               ))}
             </div>
