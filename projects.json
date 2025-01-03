@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Reduction Print Letters",
+        "description": "change distribution process from print to digital channals",
+        "cost": [{"product": "apple", "price": 98}, {"product": "table", "price": 85}],
+        "technologies": ["HTML", "CSS", "JavaScript", "ReactJs"],
+        "img": "ReductionLetters"
+    },
+    {
+        "name": "Update PB",
+        "description": "move to new servers and update PB application",
+        "cost": [{"product": "water", "price": 44}, {"product": "spoon", "price": 55}],
+        "technologies": [".Net", "PoweShell", "IT"],
+        "img": "UpdatePB"
+    }
+]

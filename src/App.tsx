@@ -1,33 +1,18 @@
 // import { useState } from 'react'
 import './App.css';
 import classes from './main.module.css';
-//import annaLogo from './images/logo-a-grey.svg';
 import annaLogo from './images/logo-a-trans.svg';
 import upArrow from './images/arrow-up.svg';
 import githubImg from "./images/github.svg";
 import linkedinImg from "./images/linkedin.svg";
-import reactIcon from "./images/react-icon.svg";
-import jsIcon from "./images/js-icon.svg";
-import htmlIcon from "./images/html5-icon.svg";
 import Section from './components/Section';
 import Project from './components/Project';
 
 // npm install @types/node --save-dev
 // npm i @types/webpack-env -D
-
 // require.context('../images/', true, /\.(png|ico|svg|jpg|gif)$/)
-// require.context('./images/', useSubdirectories = false, RegExp = /^**\.\/**/)
-// const imgFolder = require.context('./assets/', useSubdirectories = false)
-// const img_node = images(`./${someVariable}.png`);
-// return <img src={img_node}/>;
 
-
-// function importAll(r) {
-//   let images = {};
-//   r.keys().map(item => { images[item.replace('./', '')] = r(item); });
-//   return images;
-// }
-// const images = importAll(require.context('./images', false, '/\.svg/'));
+const imagesVite = Object.values(import.meta.glob('./images/techs/*.{png,jpg,jpeg,PNG,JPEG,svg}', { eager: true, query: '?url', import: 'default' }));
 
 
 let projects = [{
@@ -45,7 +30,6 @@ let projects = [{
 function App() {
 
   //const [isScroll, setIsScroll] = useState(false);
-
   return (
     <div>
       <div role='banner' id='top' className={classes.row}>
@@ -86,9 +70,9 @@ function App() {
               Adept at optimizing processes, driving cost savings, and mentoring junior developers.</p>
             <h4>My Skills</h4>
             <div className={classes['work__links']}>
-              <img src={reactIcon} className={classes['work__code']} alt="ReactJs" />
-              <img src={jsIcon} className={classes['work__code']} alt="JS" />
-              <img src={htmlIcon} className={classes['work__code']} alt="Html5" />
+              {imagesVite.map((i) => (
+                <img src={i as string} className={classes['work__code']} />
+              ))}
             </div>
             <ul className={classes['work__list']}>
               <li>JavaScript(ES6+)</li>
