@@ -153,6 +153,13 @@ nav {
     transition: all .3s;
 }
 
+.skill_img {
+    display: block;
+    height: 6rem;
+    margin-left: var(--gutter-normal);
+    transition: all .3s;
+}
+
 /**********************************  TEMPPPPPP    ********/
 
 /* .header {

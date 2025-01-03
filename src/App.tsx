@@ -63,7 +63,6 @@ function App() {
           </div>
         </div>
         <section id='about'>
-          <Section sectionName={'About'}>
             <p>Passionate Frontend Developer with 4+ years of experience designing and developing dynamic, user-centric web applications.
               Proficient in React.js, JavaScript, HTML5, CSS3, and responsive design. Known for creating seamless, scalable, and maintainable code,
               improving user experiences, and collaborating effectively with cross-functional teams to deliver high-quality projects on time.
@@ -71,25 +70,17 @@ function App() {
             <h4>My Skills</h4>
             <div className={classes['work__links']}>
               {imagesVite.map((i) => (
-                <img src={i as string} className={classes['work__code']} />
+                <img src={i as string} className={classes['skill_img']} />
               ))}
             </div>
-            <ul className={classes['work__list']}>
-              <li>JavaScript(ES6+)</li>
-              <li>React.js</li>
-              <li>JQuery</li>
-              <li>Vue.js</li>
-              <li>.Net</li>
-              <li>HTML5</li>
-              <li>CSS3</li>
-            </ul>
-          </Section>
+            {/* <ul className={classes['work__list']}>
+              <li>JavaScript(ES6+)</li><li>React.js</li><li>JQuery</li><li>Vue.js</li><li>.Net</li><li>HTML5</li><li>CSS3</li></ul> */}
         </section>
         <section id='projects'>
           <ul>
             <div>
               {projects.map((pro, i) => (
-                <Section key={'s' + i} sectionName={`# ${i + 1} Project`}>
+                <Section showImg={true} key={'s' + i} sectionName={`# ${i + 1} Project`}>
                   <Project key={'p' + i} projects={pro} />
                 </Section>
               ))}
