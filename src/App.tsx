@@ -1,7 +1,8 @@
 // import { useState } from 'react'
 import './App.css';
 import classes from './main.module.css';
-import annaLogo from './images/logo-a-grey.svg';
+//import annaLogo from './images/logo-a-grey.svg';
+import annaLogo from './images/logo-a-trans.svg';
 import upArrow from './images/arrow-up.svg';
 import githubImg from "./images/github.svg";
 import linkedinImg from "./images/linkedin.svg";
@@ -48,8 +49,7 @@ function App() {
   return (
     <div>
       <div role='banner' id='top' className={classes.row}>
-        {/* <a href="https://vite.dev" target="_blank"> */}
-        <img src={annaLogo} className={classes.logo} alt="Vite logo" />
+        <img src={annaLogo} className={classes.logo} alt="Anna logo" />
         <nav>
           <ul className={classes['nav__items']}>
             <li><a href='#about'>About</a></li>
