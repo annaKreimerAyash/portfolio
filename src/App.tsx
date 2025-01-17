@@ -6,9 +6,9 @@ import annaLogo from './images/logo-a-trans.svg';
 import upArrow from './images/arrow-up.svg';
 import githubImg from "./images/github.svg";
 import linkedinImg from "./images/linkedin.svg";
-import reactIcon from "./images/react-icon.svg";
-import jsIcon from "./images/js-icon.svg";
-import htmlIcon from "./images/html5-icon.svg";
+// import reactIcon from "./images/react-icon.svg";
+// import jsIcon from "./images/js-icon.svg";
+// import htmlIcon from "./images/html5-icon.svg";
 import Section from './components/Section';
 import Project from './components/Project';
 
@@ -29,6 +29,9 @@ import Project from './components/Project';
 // }
 // const images = importAll(require.context('./images', false, '/\.svg/'));
 
+const imagesVite = Object.values(import.meta.glob('./images/techs/*.{png,jpg,jpeg,PNG,JPEG,svg}', { eager: true, query: '?url', import: 'default' }));
+
+
 
 let projects = [{
   "name": "Reduction Print Letters",
@@ -48,10 +51,13 @@ function App() {
 
   return (
     <div>
-      <div role='banner' id='top' className={classes.row}>
-        <img src={annaLogo} className={classes.logo} alt="Anna logo" />
+      {/* <div role='banner' id='top' className={classes.row}> */}
+      <div role='banner' id='top'>
+        {/* <img src={annaLogo} className={classes.logo} alt="Anna logo" /> */}
+        <img src={annaLogo} alt="Anna logo" className={classes.imgTemp} />
         <nav>
-          <ul className={classes['nav__items']}>
+          {/* <ul className={classes['nav__items']}> */}
+          <ul>
             <li><a href='#about'>About</a></li>
             <li><a href='#projects'>Projects</a></li>
             <li><a>Contact</a></li>
@@ -60,20 +66,25 @@ function App() {
       </div>
       {/* <div role='main' onScroll={() => setIsScroll(true)} style={{ overflowY: 'scroll', height: '450px' }}> */}
       <div role='main'>
-        <div className={classes.row}>
+        {/* <div className={classes.row}> */}
+        <div>
           <div>
             <h1>Anna Kreimer Ayash</h1>
             <h2>I build things for the web.</h2>
             <p>I'm a software engineer specializing in building exceptional digital experiences.</p>
-            <div className={classes['work__links']}>
-              <a target="_blank" className={classes['link__text']}>
+            {/* <div className={classes['work__links']}> */}
+            <div>
+              {/* <a target="_blank" className={classes['link__text']}> */}
+              <a target="_blank">
                 Visit Isracard Site <span>→</span>
               </a>
               <a href="https://github.com/annaKreimerAyash/portfolio" title="View Source Code" target="_blank">
-                <img src={githubImg} className={classes['work__code']} alt="GitHub" />
+                {/* <img src={githubImg} className={classes['work__code']} alt="GitHub" /> */}
+                <img src={githubImg} alt="GitHub" className={classes.imgTemp} />
               </a>
               <a href="https://linkedin.com/in/annakayash" title="Anna's LinkedIn Profile" target="_blank">
-                <img src={linkedinImg} className={classes['work__code']} alt="LinkedIn" />
+                {/* <img src={linkedinImg} className={classes['work__code']} alt="LinkedIn" /> */}
+                <img src={linkedinImg} alt="LinkedIn" className={classes.imgTemp} />
               </a>
             </div>
           </div>
@@ -85,7 +96,12 @@ function App() {
               improving user experiences, and collaborating effectively with cross-functional teams to deliver high-quality projects on time.
               Adept at optimizing processes, driving cost savings, and mentoring junior developers.</p>
             <h4>My Skills</h4>
-            <div className={classes['work__links']}>
+            <div>
+              {imagesVite.map((i) => (
+                <img src={i as string} className={classes.imgTemp} />
+              ))}
+            </div>
+            {/* <div className={classes['work__links']}>
               <img src={reactIcon} className={classes['work__code']} alt="ReactJs" />
               <img src={jsIcon} className={classes['work__code']} alt="JS" />
               <img src={htmlIcon} className={classes['work__code']} alt="Html5" />
@@ -98,7 +114,7 @@ function App() {
               <li>.Net</li>
               <li>HTML5</li>
               <li>CSS3</li>
-            </ul>
+            </ul> */}
           </Section>
         </section>
         <section id='projects'>
@@ -117,7 +133,8 @@ function App() {
       {/* {isScroll && <a href='#top' className={classes['back-to-top']}>
         <img src={upArrow} alt="back-to-top" />
       </a>} */}
-      <a href='#top' className={classes['back-to-top']}>
+      {/* <a href='#top' className={classes['back-to-top']}> */}
+      <a href='#top' className={classes.arrowTop}>
         <img src={upArrow} alt="back-to-top" />
       </a>
     </div>

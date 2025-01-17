@@ -1,4 +1,4 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
@@ -10,8 +10,6 @@ html {
 }
 
 body {
-    /* overflow-x: hidden;
-    display: inline; */
     display: block;
     place-items: inherit;
     background-color: #202020;
@@ -43,6 +41,26 @@ body {
     --gutter-small-1: 2.5rem;
     --gutter-small: 2rem;
     --border-light: 1px solid rgb(36, 35, 35);
+} */
+
+.imgTemp{
+    height: 3rem;
+}
+.arrowTop {
+    position: fixed;
+    bottom: 4rem;
+    right: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    width: 3rem;
+    background-color: #D73766;
+    border-radius: 50%;
+    z-index: 10;
+    transition: all .4s;
+    scroll-behavior: smooth;
+
 }
 
 .row {
