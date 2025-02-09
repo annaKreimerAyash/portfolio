@@ -39,7 +39,7 @@ function App() {
         {/* <div className={classes.row}> */}
         <div>
           <div>
-            <h1>Anna Kreimer Ayash GGGGGGG</h1>
+            <h1>Anna Kreimer Ayash</h1>
             <h2>I build things for the web.</h2>
             <p>I'm a software engineer specializing in building exceptional digital experiences.</p>
             {/* <div className={classes['work__links']}> */}
