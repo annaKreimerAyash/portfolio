@@ -12,7 +12,7 @@ import projectsData from '../projects.json';
 // npm install @types/node --save-dev
 // npm i @types/webpack-env -D
 
-const imagesVite = Object.values(import.meta.glob('./images/techs/*.{png,jpg,jpeg,PNG,JPEG,svg}', { eager: true, query: '?url', import: 'default' }));
+const imagesVite = Object.values(import.meta.glob('./images/skills/*.{png,jpg,jpeg,PNG,JPEG,svg}', { eager: true, query: '?url', import: 'default' }));
 
 let projects = projectsData;
 
