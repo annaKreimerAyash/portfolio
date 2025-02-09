@@ -8,6 +8,8 @@ import linkedinImg from "./images/linkedin.svg";
 import Section from './components/Section';
 import Project from './components/Project';
 import projectsData from '../projects.json';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Button from 'react-bootstrap/Button';
 
 // npm install @types/node --save-dev
 // npm i @types/webpack-env -D
@@ -41,6 +43,8 @@ function App() {
           <div>
             <h1>Anna Kreimer Ayash</h1>
             <h2>I build things for the web.</h2>
+            <button>button clean</button>
+            <Button as="a" variant="primary">Button bootstrap</Button>
             <p>I'm a software engineer specializing in building exceptional digital experiences.</p>
             {/* <div className={classes['work__links']}> */}
             <div>
