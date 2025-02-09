@@ -1,5 +1,5 @@
 
-import './App.css';
+//import './App.css';
 import classes from './main.module.css';
 import annaLogo from './images/logo-a-trans.svg';
 import upArrow from './images/arrow-up.svg';
