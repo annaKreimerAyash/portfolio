@@ -8,12 +8,21 @@ import linkedinImg from "./images/linkedin.svg";
 import Section from './components/Section';
 import Project from './components/Project';
 import projectsData from './components/projects.json';
+
+// import ThemeProvider from 'react-bootstrap/ThemeProvider';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import Image from 'react-bootstrap/Image';
 
 // npm install @types/node --save-dev    //  npm i @types/webpack-env -D
 
-const imagesVite = Object.values(import.meta.glob<string>('./images/skills/*.{png,jpg,jpeg,PNG,JPEG,svg}', { eager: true, query: '?url', import: 'default' }));
+const imagesVite = Object.values(import.meta.glob<string>('./images/skills/*.{png,jpg,jpeg,PNG,JPEG,svg}', {
+  eager: true,
+  query: '?url',
+  import: 'default'
+}));
 
 let projects = projectsData;
 
@@ -21,73 +30,67 @@ function App() {
 
   //const [isScroll, setIsScroll] = useState(false);
   return (
-    <div>
-      {/* <div role='banner' id='top' className={classes.row}> */}
-      <div role='banner' id='top'>
-        {/* <img src={annaLogo} className={classes.logo} alt="Anna logo" /> */}
-        <img src={annaLogo} alt="Anna logo" className={classes.imgTemp} />
-        <nav>
-          {/* <ul className={classes['nav__items']}> */}
-          <ul>
-            <li><a href='#about'>About</a></li>
-            <li><a href='#projects'>Projects</a></li>
-            <li><a>Contact</a></li>
-          </ul>
-        </nav>
+    // <ThemeProvider breakpoints={['xxxl', 'xxl', 'xl', 'lg', 'md', 'sm', 'xs', 'xxs']} minBreakpoint="xxs">
+    <Container fluid>
+      <Navbar expand="lg" className="bg-body-tertiary">
+        {/* <Container fluid="sm"> */}
+        <Navbar.Brand href="#home">Anna's Portfolio</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="ms-auto">
+            <Nav.Link href="#about">About</Nav.Link>
+            <Nav.Link href="#projects">Projects</Nav.Link>
+            {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+                  <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                  <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                </NavDropdown> */}
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+      <Image src={annaLogo} alt="Anna logo" fluid width="10%" />
+      <h1>Anna Kreimer Ayash</h1>
+      <h2>I build things for the web.</h2>
+      <p>I'm a software engineer specializing in building exceptional digital experiences.</p>
+      <div>
+        {/* <a target="_blank" className={classes['link__text']}> */}
+        <a target="_blank">
+          Visit Isracard Site <span>→</span>
+        </a>
+        <a href="https://github.com/annaKreimerAyash/portfolio" title="View Source Code" target="_blank">
+          <Image src={githubImg} alt="GitHub" fluid width="5%" />
+        </a>
+        <a href="https://linkedin.com/in/annakayash" title="Anna's LinkedIn Profile" target="_blank">
+          <Image src={linkedinImg} alt="LinkedIn" fluid width="5%" />
+        </a>
       </div>
-      {/* <div role='main' onScroll={() => setIsScroll(true)} style={{ overflowY: 'scroll', height: '450px' }}> */}
-      <div role='main'>
-        {/* <div className={classes.row}> */}
-        <div>
+      <section id='about'>
+        <Section sectionName={'About'}>
+          <p>Passionate Frontend Developer with 4+ years of experience designing and developing dynamic, user-centric web applications.
+            Proficient in React.js, JavaScript, HTML5, CSS3, and responsive design. Known for creating seamless, scalable, and maintainable code,
+            improving user experiences, and collaborating effectively with cross-functional teams to deliver high-quality projects on time.
+            Adept at optimizing processes, driving cost savings, and mentoring junior developers.</p>
+          <h4>My Skills</h4>
           <div>
-            <h1>Anna Kreimer Ayash</h1>
-            <h2>I build things for the web.</h2>
-            <button>button clean</button>
-            <Button as="a" variant="primary">Button bootstrap</Button>
-            <p>I'm a software engineer specializing in building exceptional digital experiences.</p>
-            {/* <div className={classes['work__links']}> */}
-            <div>
-              {/* <a target="_blank" className={classes['link__text']}> */}
-              <a target="_blank">
-                Visit Isracard Site <span>→</span>
-              </a>
-              <a href="https://github.com/annaKreimerAyash/portfolio" title="View Source Code" target="_blank">
-                {/* <img src={githubImg} className={classes['work__code']} alt="GitHub" /> */}
-                <img src={githubImg} alt="GitHub" className={classes.imgTemp} />
-              </a>
-              <a href="https://linkedin.com/in/annakayash" title="Anna's LinkedIn Profile" target="_blank">
-                {/* <img src={linkedinImg} className={classes['work__code']} alt="LinkedIn" /> */}
-                <img src={linkedinImg} alt="LinkedIn" className={classes.imgTemp} />
-              </a>
-            </div>
+            {imagesVite.map((i, j) => (
+              <Image key={j} src={i} fluid width="15%" />
+            ))}
           </div>
-        </div>
-        <section id='about'>
-          <Section sectionName={'About'}>
-            <p>Passionate Frontend Developer with 4+ years of experience designing and developing dynamic, user-centric web applications.
-              Proficient in React.js, JavaScript, HTML5, CSS3, and responsive design. Known for creating seamless, scalable, and maintainable code,
-              improving user experiences, and collaborating effectively with cross-functional teams to deliver high-quality projects on time.
-              Adept at optimizing processes, driving cost savings, and mentoring junior developers.</p>
-            <h4>My Skills</h4>
-            <div>
-              {imagesVite.map((i, j) => (
-                  <img key={j} src={i} className={classes.imgTemp} />
-              ))}
-            </div>
-          </Section>
-        </section>
-        <section id='projects'>
-          <ul>
-            <div>
-              {projects.map((pro, i) => (
-                <Section key={'s' + i} sectionName={`# ${i + 1} Project`}>
-                  <Project key={'p' + i} projects={pro} />
-                </Section>
-              ))}
-            </div>
-          </ul>
-        </section>
-      </div>
+        </Section>
+      </section>
+      <section id='projects'>
+        <ul>
+          <div>
+            {projects.map((pro, i) => (
+              <Section key={'s' + i} sectionName={`# ${i + 1} Project`}>
+                <Project key={'p' + i} projects={pro} />
+              </Section>
+            ))}
+          </div>
+        </ul>
+      </section>
+
       {/* <a href='#top' className={isScroll? classes['back-to-top'] : classes.hidden} onClick={!isScroll}> */}
       {/* {isScroll && <a href='#top' className={classes['back-to-top']}>
         <img src={upArrow} alt="back-to-top" />
@@ -96,7 +99,9 @@ function App() {
       <a href='#top' className={classes.arrowTop}>
         <img src={upArrow} alt="back-to-top" />
       </a>
-    </div>
+    </Container>
+    // </ThemeProvider>
+
   )
 }
 

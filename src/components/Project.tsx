@@ -22,24 +22,21 @@ interface Project {
 
 export default function Project(props: { projects: Project }) {
     return (
-        <>
-            <Container>
-                <Row>
-                    <Col>
-                        <h4>{props.projects.name}</h4>
-                        <p>{props.projects.description}</p>
-                        <ul>
-                            {props.projects.technologies.map((tech, j) => (
-                                <li key={j}>{tech}</li>
-                            ))}
-                        </ul>
-                    </Col>
-                    <Col>
-                        <Image src={props.projects.photo} fluid />
-                    </Col>
-                </Row>
-            </Container>
-
-        </>
+        <Container>
+            <Row>
+                <Col>
+                    <h4>{props.projects.name}</h4>
+                    <p>{props.projects.description}</p>
+                    <ul>
+                        {props.projects.technologies.map((tech, j) => (
+                            <li key={j}>{tech}</li>
+                        ))}
+                    </ul>
+                </Col>
+                <Col>
+                    <Image src={props.projects.photo} fluid />
+                </Col>
+            </Row>
+        </Container>
     )
 }
