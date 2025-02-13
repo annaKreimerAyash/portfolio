@@ -1,0 +1,20 @@
+[
+  {
+    "name": "PB Catalog Application",
+    "description": "Menagement application for PB templates based on React and .Net",
+    "technologies": ["ReactJs", ".Net", "SQL"],
+    "photo": "/portfolio/src/images/projects/pbCatalog.png"
+  },  
+  {
+    "name": "Reduction Print Letters",
+    "description": "change distribution process from print to digital channals",
+    "technologies": ["HTML", "CSS", "JavaScript", "ReactJs"], 
+    "photo": "/portfolio/src/images/projects/reductionLetters.jpeg"
+  },
+  {
+    "name": "Update PB",
+    "description": "bla bla bla",
+    "technologies": [".Net", "PoweShell", "IT"],
+    "photo": "/portfolio/src/images/projects/pb.png"
+  }
+]

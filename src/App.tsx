@@ -7,14 +7,13 @@ import githubImg from "./images/github.svg";
 import linkedinImg from "./images/linkedin.svg";
 import Section from './components/Section';
 import Project from './components/Project';
-import projectsData from '../projects.json';
+import projectsData from './components/projects.json';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 
-// npm install @types/node --save-dev
-// npm i @types/webpack-env -D
+// npm install @types/node --save-dev    //  npm i @types/webpack-env -D
 
-const imagesVite = Object.values(import.meta.glob('./images/skills/*.{png,jpg,jpeg,PNG,JPEG,svg}', { eager: true, query: '?url', import: 'default' }));
+const imagesVite = Object.values(import.meta.glob<string>('./images/skills/*.{png,jpg,jpeg,PNG,JPEG,svg}', { eager: true, query: '?url', import: 'default' }));
 
 let projects = projectsData;
 
@@ -71,8 +70,8 @@ function App() {
               Adept at optimizing processes, driving cost savings, and mentoring junior developers.</p>
             <h4>My Skills</h4>
             <div>
-              {imagesVite.map((i) => (
-                <img src={i as string} className={classes.imgTemp} />
+              {imagesVite.map((i, j) => (
+                  <img key={j} src={i} className={classes.imgTemp} />
               ))}
             </div>
           </Section>

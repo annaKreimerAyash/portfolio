@@ -1,13 +1,22 @@
-import projectImg from "../images/project-3.png";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
+// import "../images/projects/project-3.png";
+
+/* const imgProjects = Object.values(import.meta.glob<string>('../images/projects/*.{png,jpg,jpeg,PNG,JPEG,svg}', { eager: true, query: '?url', import: 'default' }));
+const imgProjectsKeys = Object.keys(import.meta.glob<string>('../images/projects/*.{png,jpg,jpeg,PNG,JPEG,svg}', { eager: true, query: '?url', import: 'default' }));
+const gallery: { photo: string; key: string; }[] = [];
+imgProjects.map((image, j) => (
+    gallery.push({ "photo": image, "key": imgProjectsKeys[j] })
+)) */
+
 
 interface Project {
     name: string,
     description: string,
     technologies: string[],
+    photo: string
     // children?: ReactNode
 }
 
@@ -26,7 +35,7 @@ export default function Project(props: { projects: Project }) {
                         </ul>
                     </Col>
                     <Col>
-                        <Image src={projectImg} alt="Project 1" fluid />
+                        <Image src={props.projects.photo} fluid />
                     </Col>
                 </Row>
             </Container>
