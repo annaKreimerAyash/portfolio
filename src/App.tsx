@@ -12,6 +12,8 @@ import projectsData from './components/projects.json';
 // import ThemeProvider from 'react-bootstrap/ThemeProvider';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Image from 'react-bootstrap/Image';
@@ -53,18 +55,23 @@ function App() {
       <h1>Anna Kreimer Ayash</h1>
       <h2>I build things for the web.</h2>
       <p>I'm a software engineer specializing in building exceptional digital experiences.</p>
-      <div>
-        {/* <a target="_blank" className={classes['link__text']}> */}
-        <a target="_blank">
-          Visit Isracard Site <span>→</span>
-        </a>
-        <a href="https://github.com/annaKreimerAyash/portfolio" title="View Source Code" target="_blank">
-          <Image src={githubImg} alt="GitHub" fluid width="5%" />
-        </a>
-        <a href="https://linkedin.com/in/annakayash" title="Anna's LinkedIn Profile" target="_blank">
-          <Image src={linkedinImg} alt="LinkedIn" fluid width="5%" />
-        </a>
-      </div>
+      <Row>
+        {/* <Col xs={6} md={4}>
+          <a target="_blank">
+            Visit Isracard Site <span>→</span>
+          </a>
+        </Col> */}
+        <Col xs={6} md={4}>
+          <a href="https://github.com/annaKreimerAyash/portfolio" title="View Source Code" target="_blank">
+            <Image src={githubImg} alt="GitHub" fluid width="10%" />
+          </a>
+        </Col>
+        <Col xs={6} md={4}>
+          <a href="https://linkedin.com/in/annakayash" title="Anna's LinkedIn Profile" target="_blank">
+            <Image src={linkedinImg} alt="LinkedIn" fluid width="10%" />
+          </a>
+        </Col>
+      </Row>
       <section id='about'>
         <Section sectionName={'About'}>
           <p>Passionate Frontend Developer with 4+ years of experience designing and developing dynamic, user-centric web applications.
