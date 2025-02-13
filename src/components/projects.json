@@ -3,13 +3,13 @@
     "name": "PB Catalog Application",
     "description": "Menagement application for PB templates based on React and .Net",
     "technologies": ["ReactJs", ".Net", "SQL"],
-    "photo": "/portfolio/src/images/projects/pbCatalog.png"
+    "photo": "/portfolio/src/images/projects/pblatalog.png"
   },  
   {
     "name": "Reduction Print Letters",
     "description": "change distribution process from print to digital channals",
     "technologies": ["HTML", "CSS", "JavaScript", "ReactJs"], 
-    "photo": "/portfolio/src/images/projects/reductionLetters.jpeg"
+    "photo": "/portfolio/src/images/projects/reductionletters.jpeg"
   },
   {
     "name": "Update PB",
