@@ -52,7 +52,7 @@ function App() {
         </Navbar.Collapse>
       </Navbar>
       <Image src={annaLogo} alt="Anna logo" fluid width="10%" />
-      <h1>Anna Kreimer Ayash aaaaaaaaaa</h1>
+      <h1>Anna Kreimer Ayash</h1>
       <h2>I build things for the web.</h2>
       <p>I'm a software engineer specializing in building exceptional digital experiences.</p>
       <Row>
