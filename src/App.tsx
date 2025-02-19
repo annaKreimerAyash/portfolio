@@ -1,6 +1,7 @@
 
 //import './App.css';
 import classes from './main.module.css';
+import mepic from './images/pinkme.png';
 import annaLogo from './images/logo-a-trans.svg';
 import upArrow from './images/arrow-up.svg';
 import githubImg from "./images/github.svg";
@@ -51,10 +52,17 @@ function App() {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-      <Image src={annaLogo} alt="Anna logo" fluid width="10%" />
-      <h1>Anna Kreimer Ayash</h1>
-      <h2>I build things for the web.</h2>
-      <p>I'm a software engineer specializing in building exceptional digital experiences.</p>
+      <Row className="justify-content-md-center">
+        <Col xs lg="4">
+          <Image src={mepic} fluid/>
+        </Col>
+        <Col xs lg="4">
+          <Image src={annaLogo} alt="Anna logo"  width="20%" />
+          <h1>Anna Kreimer Ayash</h1>
+          <h2>I build things for the web.</h2>
+          <p>I'm a software engineer specializing in building exceptional digital experiences.</p>
+        </Col>
+      </Row>
       <Row>
         {/* <Col xs={6} md={4}>
           <a target="_blank">
