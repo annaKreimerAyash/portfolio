@@ -18,6 +18,7 @@ import Col from 'react-bootstrap/Col';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Image from 'react-bootstrap/Image';
+import Button from 'react-bootstrap/Button';
 
 // npm install @types/node --save-dev    //  npm i @types/webpack-env -D
 
@@ -52,15 +53,16 @@ function App() {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-      <Row className="justify-content-md-center">
+      <Row className="justify-content-md-center align-items-center">
         <Col xs lg="4">
           <Image src={mepic} fluid/>
         </Col>
         <Col xs lg="4">
           <Image src={annaLogo} alt="Anna logo"  width="20%" />
-          <h1>Anna Kreimer Ayash</h1>
-          <h2>I build things for the web.</h2>
-          <p>I'm a software engineer specializing in building exceptional digital experiences.</p>
+          <h1>Anna Ayash</h1>
+          <h2>Frontend Developer</h2>
+          <Button className="rounded-pill ms-5" variant="outline-dark">Download CV</Button>
+          <Button className="rounded-pill ms-3" variant="dark">Contact Info</Button>
         </Col>
       </Row>
       <Row>
@@ -69,14 +71,14 @@ function App() {
             Visit Isracard Site <span>→</span>
           </a>
         </Col> */}
-        <Col xs={6} md={4}>
+        <Col md={{ span: 1, offset: 8 }}>
           <a href="https://github.com/annaKreimerAyash/portfolio" title="View Source Code" target="_blank">
-            <Image src={githubImg} alt="GitHub" fluid width="10%" />
+            <Image src={githubImg} alt="GitHub" fluid  />
           </a>
         </Col>
-        <Col xs={6} md={4}>
+        <Col md={{ span: 1 }}>
           <a href="https://linkedin.com/in/annakayash" title="Anna's LinkedIn Profile" target="_blank">
-            <Image src={linkedinImg} alt="LinkedIn" fluid width="10%" />
+            <Image src={linkedinImg} alt="LinkedIn" fluid  />
           </a>
         </Col>
       </Row>
