@@ -86,22 +86,28 @@ function App() {
         </Col> */}
       </Container>
 
-      <Container fluid className={classes.full}>
-        <Row className="align-items-center h-100">
-          <section id='about'>
-            <Section sectionName={'About'}>
-              <p>Passionate Frontend Developer with 4+ years of experience designing and developing dynamic, user-centric web applications.
-                Proficient in React.js, JavaScript, HTML5, CSS3, and responsive design. Known for creating seamless, scalable, and maintainable code,
-                improving user experiences, and collaborating effectively with cross-functional teams to deliver high-quality projects on time.
-                Adept at optimizing processes, driving cost savings, and mentoring junior developers.</p>
-              <h4>My Skills</h4>
-              <div>
-                {imagesVite.map((i, j) => (
-                  <Image key={j} src={i} fluid width="15%" />
-                ))}
-              </div>
-            </Section>
-          </section>
+      <Container id='about' fluid className={classes.full}>
+        <Row className="justify-content-md-center align-items-start mt-2 h-100">
+          <Col xs lg="9">
+            <h3 className="fs-2">About Me</h3>
+            <p className="fs-4">Passionate Frontend Developer with 5 years of experience developing dynamic web applications with
+              JavaScript, React.js and .Net.<br/> Proficient in creating seamless, scalable, and maintainable code
+              and improving user experiences.<br/> Collaborating effectively with cross-functional teams to deliver high-quality projects on time
+              And adept at optimizing processes, driving cost savings, and mentoring junior developers.</p>
+            <h4 className="my-5">My Skills</h4>
+            <Row>
+              {imagesVite.map((i, j) => (
+                <Col>
+                  <Image key={j} src={i} fluid />
+                </Col>
+              ))}
+            </Row>
+          </Col>
+          {/* <section id='about'> */}
+          {/* <Section sectionName={'About'}> */}
+
+          {/* </Section> */}
+          {/* </section> */}
         </Row>
       </Container>
       <Container fluid className={classes.full} id='projects'>
