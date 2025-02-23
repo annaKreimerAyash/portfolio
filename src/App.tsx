@@ -6,7 +6,7 @@ import mepic from './images/pinkme.png';
 // import upArrow from './images/arrow-up.svg';
 import githubImg from "./images/github.svg";
 import linkedinImg from "./images/linkedin.svg";
-import Section from './components/Section';
+// import Section from './components/Section';
 import Project from './components/Project';
 import projectsData from './components/projects.json';
 
@@ -38,13 +38,15 @@ function App() {
     <>
       <Container fluid className={classes.full}>
         <Navbar expand="lg" className="bg-body-tertiary">
+          {/* <Navbar expand="lg" className={`bg-body-tertiary ${classes.pinktext}`}> */}
           <Navbar.Brand className={classes.pinktext} href="#home">Anna's Portfolio</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
+            {/* <Nav className="ms-auto"> */}
             <Nav className="ms-auto">
-              <Nav.Link href="#about">About</Nav.Link>
-              <Nav.Link href="#projects">Projects</Nav.Link>
-              <Nav.Link href="#contact">Contact</Nav.Link>
+              <Nav.Link className={classes.pinktext} href="#about">About</Nav.Link>
+              <Nav.Link className={classes.pinktext} href="#projects">Projects</Nav.Link>
+              <Nav.Link className={classes.pinktext} href="#contact">Contact</Nav.Link>
               {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                   <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                   <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
@@ -62,7 +64,7 @@ function App() {
           <Col xs lg="4">
             {/* <Image src={annaLogo} alt="Anna logo" width="20%" /> */}
             <div className="text-center">
-              <h1>Anna Ayash</h1>
+              <h1 className={classes.bb}>Anna Ayash</h1>
               <h2>Frontend Developer</h2>
             </div>
             <div className="mt-4 d-flex justify-content-center gap-3">
@@ -77,16 +79,7 @@ function App() {
                 <Image src={linkedinImg} alt="LinkedIn" className={classes.imgvw} />
               </a>
             </div>
-            {/* <Row className="pt-5">
-              <Col>
-               
-              </Col>
-              <Col>
-               
-              </Col>
-            </Row> */}
           </Col>
-        {/* </Row> */}
         </div>
         {/* <Col xs={6} md={4}>
           <a target="_blank">
@@ -98,8 +91,8 @@ function App() {
       <Container id='about' fluid className={classes.full}>
         <Row className="justify-content-md-center align-items-start mt-2 h-100">
           <Col xs lg="9">
-            <h3 className="fs-2">About Me</h3>
-            <p className="fs-4">Passionate Frontend Developer with 5 years of experience developing dynamic web applications with
+            <h2 >About Me</h2>
+            <p className="fs-5">Passionate Frontend Developer with 5 years of experience developing dynamic web applications with
               JavaScript, React.js and .Net.<br /> Proficient in creating seamless, scalable, and maintainable code
               and improving user experiences.<br /> Collaborating effectively with cross-functional teams to deliver high-quality projects on time
               And adept at optimizing processes, driving cost savings, and mentoring junior developers.</p>
@@ -112,23 +105,22 @@ function App() {
               ))}
             </Row>
           </Col>
-          {/* <section id='about'> */}
-          {/* <Section sectionName={'About'}> */}
-
-          {/* </Section> */}
-          {/* </section> */}
         </Row>
       </Container>
+      {/* <Section key={'s' + i} sectionName={`# ${i + 1} Project`}></Section>  */}
       <Container fluid className={classes.full} id='projects'>
-        {/* <section id='projects'>
-          <> */}
-        {projects.map((pro, i) => (
-          <Row className="h-100">
-            <Section key={'s' + i} sectionName={`# ${i + 1} Project`}>
-              <Project key={'p' + i} projects={pro} />
-            </Section>
-          </Row>
-        ))}
+        <Row className="justify-content-md-center align-items-start mt-2">
+          <Col xs lg="9">
+            <h2>Projects</h2>
+            {projects.map((pro, i) => (
+              <div key={'s' + i} className="d-flex justify-content-center align-items-center border rounded border-dark my-5 p-5 gap-2">
+                <Project key={'proj' + i} projects={pro} />
+              </div>
+            ))}
+          </Col>
+        </Row>
+
+
         {/* </>
       </section> */}
       </Container>
