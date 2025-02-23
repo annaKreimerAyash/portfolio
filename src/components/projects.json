@@ -7,14 +7,14 @@
   },  
   {
     "name": "Reduction Print Letters",
-    "description": "change distribution process from print to digital channals",
+    "description": "Change distribution process from print to digital channals",
     "technologies": ["HTML", "CSS", "JavaScript", "ReactJs"], 
     "photo": "https://github.com/annaKreimerAyash/portfolio/blob/main/src/images/projects/reductionLetters.jpeg?raw=true"
   },
   {
     "name": "Update PB",
-    "description": "bla bla bla",
-    "technologies": [".Net", "PoweShell", "IT"],
+    "description": "Upgraded Printboss system for the first time since it entered the organization. This project involved migrating from (Windows) Servers 2008 to 2019, upgrading the application version, enhancing integration code between the application and the organization’s systems, and developing new features to improve existing processes.",
+    "technologies": [".Net", "PoweShell", "IT and Technological infrastructure", "system-wide perspetive on procesess and technologies"],
     "photo": "https://github.com/annaKreimerAyash/portfolio/blob/main/src/images/projects/pb.png?raw=true"
   }
 ]
