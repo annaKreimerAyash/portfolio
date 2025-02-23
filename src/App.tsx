@@ -9,6 +9,7 @@ import linkedinImg from "./images/linkedin.svg";
 // import Section from './components/Section';
 import Project from './components/Project';
 import projectsData from './components/projects.json';
+import cv from '/cv-anna.pdf';
 
 // import ThemeProvider from 'react-bootstrap/ThemeProvider';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -68,7 +69,7 @@ function App() {
               <h2>Frontend Developer</h2>
             </div>
             <div className="mt-4 d-flex justify-content-center gap-3">
-              <Button className="rounded-pill" variant="outline-dark">Download CV</Button>
+              <a className="btn btn-outline-dark  rounded-pill" href={cv} download>Download CV</a>
               <Button className="rounded-pill" variant="dark">Contact Info</Button>
             </div>
             <div className="mt-4 d-flex justify-content-center gap-3">
