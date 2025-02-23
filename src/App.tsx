@@ -2,7 +2,7 @@
 //import './App.css';
 import classes from './main.module.css';
 import mepic from './images/pinkme.png';
-import annaLogo from './images/logo-a-trans.svg';
+// import annaLogo from './images/logo-a-trans.svg';
 // import upArrow from './images/arrow-up.svg';
 import githubImg from "./images/github.svg";
 import linkedinImg from "./images/linkedin.svg";
@@ -38,7 +38,7 @@ function App() {
     <>
       <Container fluid className={classes.full}>
         <Navbar expand="lg" className="bg-body-tertiary">
-          <Navbar.Brand href="#home">Anna's Portfolio</Navbar.Brand>
+          <Navbar.Brand className={classes.pinktext} href="#home">Anna's Portfolio</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
@@ -54,31 +54,40 @@ function App() {
             </Nav>
           </Navbar.Collapse>
         </Navbar>
-        {/* <Row className="justify-content-md-center align-items-center"> */}
-        <Row className="justify-content-md-center align-items-center h-100">
+        {/* <Row className="justify-content-md-center align-items-center h-100"> */}
+        <div className="d-flex justify-content-center align-items-center gap-4 h-100">
           <Col xs lg="4">
             <Image src={mepic} fluid />
           </Col>
           <Col xs lg="4">
-            <Image src={annaLogo} alt="Anna logo" width="20%" />
-            <h1>Anna Ayash</h1>
-            <h2>Frontend Developer</h2>
-            <Button className="rounded-pill ms-5" variant="outline-dark">Download CV</Button>
-            <Button className="rounded-pill ms-3" variant="dark">Contact Info</Button>
-            <Row>
+            {/* <Image src={annaLogo} alt="Anna logo" width="20%" /> */}
+            <div className="text-center">
+              <h1>Anna Ayash</h1>
+              <h2>Frontend Developer</h2>
+            </div>
+            <div className="mt-4 d-flex justify-content-center gap-3">
+              <Button className="rounded-pill" variant="outline-dark">Download CV</Button>
+              <Button className="rounded-pill" variant="dark">Contact Info</Button>
+            </div>
+            <div className="mt-4 d-flex justify-content-center gap-3">
+              <a href="https://github.com/annaKreimerAyash/portfolio" title="View Source Code" target="_blank">
+                <Image src={githubImg} alt="GitHub" className={classes.imgvw} />
+              </a>
+              <a href="https://linkedin.com/in/annakayash" title="Anna's LinkedIn Profile" target="_blank">
+                <Image src={linkedinImg} alt="LinkedIn" className={classes.imgvw} />
+              </a>
+            </div>
+            {/* <Row className="pt-5">
               <Col>
-                <a href="https://github.com/annaKreimerAyash/portfolio" title="View Source Code" target="_blank" className="my-3">
-                  <Image src={githubImg} alt="GitHub" width="15%" />
-                </a>
+               
               </Col>
               <Col>
-                <a href="https://linkedin.com/in/annakayash" title="Anna's LinkedIn Profile" target="_blank">
-                  <Image src={linkedinImg} alt="LinkedIn" width="15%" />
-                </a>
+               
               </Col>
-            </Row>
+            </Row> */}
           </Col>
-        </Row>
+        {/* </Row> */}
+        </div>
         {/* <Col xs={6} md={4}>
           <a target="_blank">
             Visit Isracard Site <span>→</span>
@@ -91,8 +100,8 @@ function App() {
           <Col xs lg="9">
             <h3 className="fs-2">About Me</h3>
             <p className="fs-4">Passionate Frontend Developer with 5 years of experience developing dynamic web applications with
-              JavaScript, React.js and .Net.<br/> Proficient in creating seamless, scalable, and maintainable code
-              and improving user experiences.<br/> Collaborating effectively with cross-functional teams to deliver high-quality projects on time
+              JavaScript, React.js and .Net.<br /> Proficient in creating seamless, scalable, and maintainable code
+              and improving user experiences.<br /> Collaborating effectively with cross-functional teams to deliver high-quality projects on time
               And adept at optimizing processes, driving cost savings, and mentoring junior developers.</p>
             <h4 className="my-5">My Skills</h4>
             <Row>

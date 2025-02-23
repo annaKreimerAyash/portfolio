@@ -46,9 +46,15 @@ body {
 /* .imgTemp{
     height: 3rem;
 } */
+ .pinktext {
+    color: #D73766 !important;
+ }
  .full{
     height: 100vh;
  }
+.imgvw {
+    width: 2.5vw;
+}
 .arrowTop {
     position: fixed;
     bottom: 4rem;
