@@ -37,58 +37,51 @@ function App() {
   return (
     // <ThemeProvider breakpoints={['xxxl', 'xxl', 'xl', 'lg', 'md', 'sm', 'xs', 'xxs']} minBreakpoint="xxs">
     <>
-      <Container fluid className={classes.full}>
+      <Container fluid className="d-flex flex-column vh-100">
+      {/* <Navbar expand="lg" className={`bg-body-tertiary ${classes.pinktext}`}> */}
         <Navbar expand="lg" className="bg-body-tertiary">
-          {/* <Navbar expand="lg" className={`bg-body-tertiary ${classes.pinktext}`}> */}
           <Navbar.Brand className={classes.pinktext} href="#home">Anna's Portfolio</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            {/* <Nav className="ms-auto"> */}
             <Nav className="ms-auto">
               <Nav.Link className={classes.pinktext} href="#about">About</Nav.Link>
               <Nav.Link className={classes.pinktext} href="#projects">Projects</Nav.Link>
               <Nav.Link className={classes.pinktext} href="#contact">Contact</Nav.Link>
-              {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                  <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-                </NavDropdown> */}
             </Nav>
           </Navbar.Collapse>
         </Navbar>
-        {/* <Row className="justify-content-md-center align-items-center h-100"> */}
-        <div className="d-flex justify-content-center align-items-center gap-4 h-100">
-          <Col xs lg="4">
-            <Image src={mepic} fluid />
-          </Col>
-          <Col xs lg="4">
-            {/* <Image src={annaLogo} alt="Anna logo" width="20%" /> */}
-            <div className="text-center">
-              <h1 className={classes.bb}>Anna Ayash</h1>
-              <h2>Frontend Developer</h2>
-            </div>
-            <div className="mt-4 d-flex justify-content-center gap-3">
-              <a className="btn btn-outline-dark  rounded-pill" href={cv} download>Download CV</a>
-              <Button className="rounded-pill" variant="dark">Contact Info</Button>
-            </div>
-            <div className="mt-4 d-flex justify-content-center gap-3">
-              <a href="https://github.com/annaKreimerAyash/portfolio" title="View Source Code" target="_blank">
-                <Image src={githubImg} alt="GitHub" className={classes.imgvw} />
-              </a>
-              <a href="https://linkedin.com/in/annakayash" title="Anna's LinkedIn Profile" target="_blank">
-                <Image src={linkedinImg} alt="LinkedIn" className={classes.imgvw} />
-              </a>
-            </div>
-          </Col>
-        </div>
-        {/* <Col xs={6} md={4}>
+        <Container fluid className="d-flex flex-column vh-100 justify-content-center align-items-center">
+          <Row className="justify-content-center align-items-center">
+            <Col xs={9} md={4}>
+              <Image src={mepic} fluid />
+            </Col>
+            <Col xs={9} md={4}>
+              {/* <Image src={annaLogo} alt="Anna logo" width="20%" /> */}
+              <div className="text-center">
+                <h1 className={classes.bb}>Anna Ayash</h1>
+                <h2>Frontend Developer</h2>
+              </div>
+              <div className="mt-4 d-flex justify-content-center gap-3">
+                <a className="btn btn-outline-dark  rounded-pill" href={cv} download>Download CV</a>
+                <Button className="rounded-pill" variant="dark">Contact Info</Button>
+              </div>
+              <div className="mt-4 d-flex justify-content-center gap-3">
+                <a href="https://github.com/annaKreimerAyash/portfolio" title="View Source Code" target="_blank">
+                  <Image src={githubImg} alt="GitHub" className={classes.imgvw} />
+                </a>
+                <a href="https://linkedin.com/in/annakayash" title="Anna's LinkedIn Profile" target="_blank">
+                  <Image src={linkedinImg} alt="LinkedIn" className={classes.imgvw} />
+                </a>
+              </div>
+            </Col>
+          </Row>
+          {/* <Col xs={6} md={4}>
           <a target="_blank">
             Visit Isracard Site <span>→</span>
           </a>
         </Col> */}
+        </Container>
       </Container>
-
       <Container id='about' fluid className={classes.full}>
         <Row className="justify-content-md-center align-items-start mt-2 h-100">
           <Col xs lg="9">
