@@ -82,7 +82,7 @@ function App() {
         </Col> */}
         </Container>
       </Container>
-      <Container id='about' fluid className="d-flex flex-column vh-100 justify-content-center align-items-center">
+      <Container id='about' fluid className="vh-100 justify-content-center align-items-center">
         <Row className="justify-content-center">
           <Col lg="9">
             <h2 >About Me</h2>
