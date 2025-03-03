@@ -82,9 +82,9 @@ function App() {
         </Col> */}
         </Container>
       </Container>
-      <Container id='about' fluid className="vh-100 justify-content-center align-items-center">
+      <Container id='about' fluid className="vh-100 justify-content-center align-items-center p-4">
         <Row className="justify-content-center">
-          <Col lg="9">
+          <Col md={9}>
             <h2 >About Me</h2>
             <p className="fs-5">Passionate Frontend Developer with 5 years of experience developing dynamic web applications with
               JavaScript, React.js and .Net.<br /> Proficient in creating seamless, scalable, and maintainable code
