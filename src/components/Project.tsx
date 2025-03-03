@@ -21,7 +21,7 @@ interface Project {
 export default function Project(props: { projects: Project }) {
     return (
         <>
-            <Col>
+            <Col xs={12} md={{ span: 6, order: 'first' }}>
                 <h4>{props.projects.name}</h4>
                 <p>{props.projects.description}</p>
                 <ul>
@@ -30,7 +30,7 @@ export default function Project(props: { projects: Project }) {
                     ))}
                 </ul>
             </Col>
-            <Col>
+            <Col md={6} xs={{ span: 12, order: 'first' }}>
                 <Image src={props.projects.photo} fluid />
             </Col>
         </>

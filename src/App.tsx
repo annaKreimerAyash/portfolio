@@ -82,18 +82,18 @@ function App() {
         </Col> */}
         </Container>
       </Container>
-      <Container id='about' fluid className={classes.full}>
-        <Row className="justify-content-md-center align-items-start mt-2 h-100">
-          <Col xs lg="9">
+      <Container id='about' fluid className="d-flex flex-column vh-100 justify-content-center align-items-center">
+        <Row className="justify-content-center">
+          <Col lg="9">
             <h2 >About Me</h2>
             <p className="fs-5">Passionate Frontend Developer with 5 years of experience developing dynamic web applications with
               JavaScript, React.js and .Net.<br /> Proficient in creating seamless, scalable, and maintainable code
               and improving user experiences.<br /> Collaborating effectively with cross-functional teams to deliver high-quality projects on time
               And adept at optimizing processes, driving cost savings, and mentoring junior developers.</p>
             <h4 className="my-5">My Skills</h4>
-            <Row>
+            <Row className="justify-content-center">
               {imagesVite.map((i, j) => (
-                <Col>
+                <Col xs={4} md={3}>
                   <Image key={j} src={i} fluid />
                 </Col>
               ))}
@@ -101,22 +101,17 @@ function App() {
           </Col>
         </Row>
       </Container>
-      {/* <Section key={'s' + i} sectionName={`# ${i + 1} Project`}></Section>  */}
-      <Container fluid className={classes.full} id='projects'>
-        <Row className="justify-content-md-center align-items-start mt-2">
-          <Col xs lg="9">
+      <Container id='projects' fluid className="vh-100 justify-content-center align-items-center">
+        <Row className="justify-content-center">
+          <Col lg="9">
             <h2>Projects</h2>
             {projects.map((pro, i) => (
-              <div key={'s' + i} className="d-flex justify-content-center align-items-center border rounded border-dark my-5 p-5 gap-2">
+                <Row key={'s' + i} className={`border rounded border-dark ${classes.padHalf} ${classes.margHalf}`}>
                 <Project key={'proj' + i} projects={pro} />
-              </div>
+              </Row>
             ))}
           </Col>
         </Row>
-
-
-        {/* </>
-      </section> */}
       </Container>
 
       {/* <a href='#top' className={isScroll? classes['back-to-top'] : classes.hidden} onClick={!isScroll}> */}
