@@ -38,7 +38,7 @@ function App() {
     // <ThemeProvider breakpoints={['xxxl', 'xxl', 'xl', 'lg', 'md', 'sm', 'xs', 'xxs']} minBreakpoint="xxs">
     <>
       <Container fluid className="d-flex flex-column vh-100">
-      {/* <Navbar expand="lg" className={`bg-body-tertiary ${classes.pinktext}`}> */}
+        {/* <Navbar expand="lg" className={`bg-body-tertiary ${classes.pinktext}`}> */}
         <Navbar expand="lg" className="bg-body-tertiary">
           <Navbar.Brand className={classes.pinktext} href="#home">Anna's Portfolio</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -86,10 +86,10 @@ function App() {
         <Row className="justify-content-center">
           <Col md={9}>
             <h2 >About Me</h2>
-            <p className="fs-5">Passionate Frontend Developer with 5 years of experience developing dynamic web applications with
-              JavaScript, React.js and .Net.<br /> Proficient in creating seamless, scalable, and maintainable code
-              and improving user experiences.<br /> Collaborating effectively with cross-functional teams to deliver high-quality projects on time
-              And adept at optimizing processes, driving cost savings, and mentoring junior developers.</p>
+            <p className="fs-5">Passionate <b>Frontend Developer</b> with 5 years of experience developing dynamic web applications with
+              <b> JavaScript, React.js </b>and <b>.Net</b>.<br /> Proficient in creating seamless, scalable, and maintainable code
+              and improving <b>user experiences.</b><br /> Collaborating effectively with cross-functional teams to deliver <b>high-quality projects</b> on time
+              And adept at optimizing processes, driving <b>cost savings</b>, and mentoring junior developers.</p>
             <h4 className="my-5">My Skills</h4>
             <Row className="justify-content-center">
               {imagesVite.map((i, j) => (
@@ -106,7 +106,7 @@ function App() {
           <Col lg="9">
             <h2>Projects</h2>
             {projects.map((pro, i) => (
-                <Row key={'s' + i} className={`border rounded border-dark ${classes.padHalf} ${classes.margHalf}`}>
+              <Row key={'s' + i} className={`border rounded border-dark ${classes.padHalf} ${classes.margHalf}`}>
                 <Project key={'proj' + i} projects={pro} />
               </Row>
             ))}
