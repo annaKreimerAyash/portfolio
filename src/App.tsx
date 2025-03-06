@@ -59,7 +59,7 @@ function App() {
               {/* <Image src={annaLogo} alt="Anna logo" width="20%" /> */}
               <div className="text-center">
                 <h1 className={classes.bb}>Anna Ayash</h1>
-                <h2>Frontend Developer</h2>
+                <h2>Full stuck Developer</h2>
               </div>
               <div className="mt-4 d-flex justify-content-center gap-3">
                 <a className="btn btn-outline-dark  rounded-pill" href={cv} download>Download CV</a>
@@ -86,7 +86,7 @@ function App() {
         <Row className="justify-content-center">
           <Col md={9}>
             <h2 >About Me</h2>
-            <p className="fs-5">Passionate <b>Frontend Developer</b> with 5 years of experience developing dynamic web applications with
+            <p className="fs-5">Passionate <b>Full stuck Developer</b> with 5 years of experience developing dynamic web applications with
               <b> JavaScript, React.js </b>and <b>.Net</b>.<br /> Proficient in creating seamless, scalable, and maintainable code
               and improving <b>user experiences.</b><br /> Collaborating effectively with cross-functional teams to deliver <b>high-quality projects</b> on time
               And adept at optimizing processes, driving <b>cost savings</b>, and mentoring junior developers.</p>
