@@ -9,7 +9,7 @@ import linkedinImg from "./images/linkedin.svg";
 // import Section from './components/Section';
 import Project from './components/Project';
 import projectsData from './components/projects.json';
-import cv from '/cv-anna.pdf';
+import cv from '/Anna Ayash-cv.pdf';
 
 // import ThemeProvider from 'react-bootstrap/ThemeProvider';
 import 'bootstrap/dist/css/bootstrap.min.css';
